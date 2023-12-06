@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+echo ""
+echo "------------------------------------------------------------------------------------"
+echo "- INFO : Sinon force l'usage d'un mdp root pour installer un plugin                -"
+sed -ri "s|^( +'debian': ')su(',)|\1sudo\2|" "/usr/share/hplip/base/password.py"
+echo ""
+echo "------------------------------------------------------------------------------------"
+echo ""

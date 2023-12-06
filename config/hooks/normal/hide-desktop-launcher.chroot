@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+# cacher les lanceurs inutiles/doublons
+p="/usr/share/applications/"
+echo "NoDisplay=true" >> "${p}xfce4-terminal-settings.desktop"
+echo "NoDisplay=true" >> "${p}mc.desktop"
+echo "NoDisplay=true" >> "${p}mcedit.desktop"
+echo "NoDisplay=true" >> "${p}display-im6.q16.desktop"
+sed -ri 's|^(NoDisplay=).*|\1true|' "${p}hp-fab.desktop" "${p}hp-sendfax.desktop"

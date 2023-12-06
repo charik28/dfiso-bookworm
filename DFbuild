@@ -1,0 +1,103 @@
+#!/bin/bash
+# Debian-Facile live-build script
+# https://debian-facile.org/git/ProjetsDF/dfiso-bookworm/
+
+# set working directory ------------------------------------------------
+DFDIR="$(realpath "$(dirname "$0")")"
+cd ${DFDIR}
+# cfg ------------------------------------------------------------------
+VERSION="12.3"
+LOG="dfiso.log"
+if [ `whoami` != root ]; then
+    echo "erreur : lancer DFbuild en tant qu'administrateur"
+    exit 1
+fi
+# args -----------------------------------------------------------------
+if [ "$1" == "32" ]; then ARCH="i386"
+elif [ "$1" == "64" ]; then ARCH="amd64"
+elif [ "$1" == "clean" ]; then lb clean && rm -R -f cache && exit 0
+else
+    # no args or wrong args > help
+    echo "Utilisation : en mode administrateur"
+    echo "./DFbuild 32    > construire DFiso i386"
+    echo "./DFbuild 64    > construire DFiso amd64"
+    echo "./DFbuild clean > nettoyer le dossier de construction et le cache"
+    echo "---"
+    echo "prenez soin de nettoyer le cache avant de construire sous une nouvelle architecture."
+    exit 1
+fi
+
+## build ISO -----------------------------------------------------------
+
+## dep check
+if ! dpkg-query -W live-build &>"/dev/null"
+then
+    echo "ERREUR: live-build n'est pas installé"
+    exit 1
+fi
+
+## place nette
+lb clean
+
+## mise en place
+echo -e "----\nbuilding DFiso-${VERSION}-${ARCH}" > ${LOG}
+echo -e "$(date)" >> ${LOG}
+echo -e "system: $(uname -a)" >> ${LOG}
+echo -e "tools: live-build-$(lb -v) - Debian-$(cat /etc/debian_version)" >> ${LOG}
+echo -e "----\n" >> ${LOG}
+
+CONFIG=()
+# utiliser apt-cacher s'il est installé
+if dpkg-query -W apt-cacher-ng &>"/dev/null"
+then
+    export http_proxy="http://127.0.0.1:3142/"
+    CONFIG+=("--apt-http-proxy" "$http_proxy")
+else
+    echo "AVERTISSEMENT: apt-cacher-ng n'est pas installé"
+fi
+
+# architecture handling
+CONFIG+=("-a" "${ARCH}")
+case $ARCH in
+    i386)CONFIG+=("-k" "686");;
+esac
+
+# version into USB name
+CONFIG+=("--iso-application" "DFiso_$VERSION" "--iso-volume" "DFiso_$VERSION")
+
+# téléchargement des cahiers du débutant si nécessaire (vérifier la version)
+LESCAHIERS="lescahiersdudebutant_12.0.1_all.deb"
+
+if [ ! -f "${DFDIR}/config/packages/${LESCAHIERS}" ]; then
+    cd ${DFDIR}/config/packages/
+    wget -c https://debian-facile.org/projets/lescahiersdudebutant/download/${LESCAHIERS}
+    cd ${DFDIR}
+fi
+
+# live-build time
+lb config ${CONFIG[@]}
+lb build
+
+## renommage
+if test -f live-image-${ARCH}.hybrid.iso; then
+    echo "INFO: renommer"
+    ISODIR="${DFDIR}/dfiso-${ARCH}"
+    NAME="debian-facile-${VERSION}_${ARCH}"
+    mkdir -p ${ISODIR}
+    mv live-image-${ARCH}.hybrid.iso ${ISODIR}/${NAME}.iso
+    mv chroot.packages.install ${ISODIR}/${NAME}.pkgs
+    mv dfiso.log ${ISODIR}/${NAME}.log
+    cd ${ISODIR} && md5sum ${NAME}.iso > ${NAME}.md5
+    cd ${DFDIR}
+    ## permissions
+    chown -R ${SUDO_USER}:${SUDO_USER} ${ISODIR}
+    echo "INFO: nettoyage"
+    lb clean
+    echo "Opération achevée en $(($SECONDS/60)) minutes"
+    exit 0
+else
+    echo "ISO non construite : erreur, voir le fichier dfiso.log"
+    exit 1
+fi
+
+## eof

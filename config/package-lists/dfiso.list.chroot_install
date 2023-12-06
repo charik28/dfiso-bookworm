@@ -1,0 +1,77 @@
+## dfiso packages ##
+
+#base
+task-french-desktop task-french
+lsb-release acpi accountsservice user-setup
+bash bash-completion command-not-found
+
+#login
+lightdm lightdm-gtk-greeter-settings mugshot
+
+#desktop & xfce4-apps
+xfce4 xfce4-terminal xfce4-notifyd xfce4-settings
+xfce4-taskmanager xarchiver xfburn xfce4-goodies
+xfce4-power-manager tlp
+
+#filer xtra
+thunar-archive-plugin tumbler-plugins-extra
+
+#network
+hexchat firefox-esr firefox-esr-l10n-fr
+webext-ublock-origin-firefox webext-keepassxc-browser
+thunderbird thunderbird-l10n-fr
+transmission-gtk network-manager-gnome
+curl wpasupplicant
+
+#office
+libreoffice-writer libreoffice-calc libreoffice-impress
+libreoffice-l10n-fr libreoffice-help-fr libreoffice-gtk3
+gnote gnome-calculator mousepad atril hplip-gui fbreader
+cups-pdf system-config-printer simple-scan
+xournalpp pdfarranger
+
+#media
+vlc asunder lame alsa-utils alsa-tools rhythmbox
+gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
+pavucontrol sox mpg123 vorbis-tools flac wavpack
+
+#graphics
+ristretto shotwell gimp drawing cheese
+
+#games
+aisleriot crack-attack four-in-a-row gnome-2048 gnome-chess
+gnome-mines gnome-nibbles gnome-sudoku quadrapassel
+gnome-mahjongg
+
+#system
+vrms synaptic gdebi gnome-system-tools dkms
+gnome-disk-utility gdisk dosfstools ntfs-3g
+mtools e2fsprogs unattended-upgrades smart-notifier
+
+#flatpak
+gnome-software-plugin-flatpak
+
+#tools
+catfish zenity zip p7zip-full most baobab keepassxc
+dvd+rw-tools xdotool eject deja-dup blueman hardinfo
+
+#misc
+gvfs-fuse gvfs-backends x11-utils x11-apps
+numlockx laptop-detect ntp qt5-style-plugins
+
+#theme
+gnome-brave-icon-theme arc-theme numix-gtk-theme
+numix-icon-theme numix-icon-theme-circle
+
+#contrib
+libdvd-pkg
+
+#nonfree - note : la plupart des firmwares sont intégrés par défaut sur Debian 12
+alsa-firmware-loaders
+firmware-linux firmware-linux-nonfree
+firmware-b43-installer firmware-b43legacy-installer
+ttf-mscorefonts-installer ttf-xfree86-nonfree unrar
+
+#geek-apps
+whois nmap nethogs ncdu iotop mc haveged dnsutils
+pciutils usbutils neofetch inxi lshw kbd

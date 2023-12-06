@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+# avertir l'utilisateur qu'on ne voit pas ce qu'on tape
+# lors de la demande de mot de passe
+echo "INFO : Pour des raisons de sécurité, rien ne s'affiche durant la saisie du mot de passe. Validez avec la touche \"entrée\"." > "/etc/sudoers.lecture"
+echo "
+Defaults        lecture_file = /etc/sudoers.lecture" >> "/etc/sudoers"

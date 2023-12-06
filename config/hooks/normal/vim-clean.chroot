@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+
+# nettoyage des vim*
+apt-get -y remove --purge vim-tiny vim-common

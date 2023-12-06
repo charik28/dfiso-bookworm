@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=System Profiler and Benchmark
+Name[fr]=À propos de ma Debian
+Comment=Afficher les informations de votre système
+Exec=/usr/bin/hardinfo
+Icon=/usr/share/pixmaps/debian-circle.png
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=System;
+Keywords=linux;kernel;system;hardware;cpu;processor;capabilities;frequency;memory;ram;board;resources;sensors;devices;usb;pci;display;network;benchmark;test;
+X-XFCE-Source=file:///usr/share/applications/hardinfo.desktop
+Path=

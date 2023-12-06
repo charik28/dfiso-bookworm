@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+
+# avatar par défaut de l'utilisateur (s'affiche dans whisker)
+ln -f /usr/share/pixmaps/dfiso-avatar.png /etc/skel/.face

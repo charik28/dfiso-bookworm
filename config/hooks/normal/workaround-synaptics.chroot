@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+
+# installation xserver-xorg-input-synaptics
+apt-get -y install xserver-xorg-input-synaptics

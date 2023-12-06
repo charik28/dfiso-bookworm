@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+
+# aucun mot de passe demandé pour entrer en mode recovery
+mkdir -p "/etc/systemd/system/rescue.service.d/"
+echo "[Service]\nEnvironment=SYSTEMD_SULOGIN_FORCE=1\n" > "/etc/systemd/system/rescue.service.d/override.conf"

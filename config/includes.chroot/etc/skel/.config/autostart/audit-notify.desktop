@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Audit-notify
+Comment=Vérifie et signale si sur l'état du gestionnaire de paquet
+Exec=/usr/share/dfiso/audit-notify.sh
+Path=/usr/share/dfiso
+Terminal=false
+StartupNotify=false

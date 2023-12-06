@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Bienvenue
+Comment=Petit message d'accueil
+Icon=debian-circle
+Exec=/usr/share/dfiso/welcome.sh
+Path=/usr/share/dfiso
+Terminal=false
+StartupNotify=true

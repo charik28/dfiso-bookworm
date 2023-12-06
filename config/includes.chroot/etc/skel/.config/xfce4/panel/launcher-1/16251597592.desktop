@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Manuel utilisateur
+Comment=Manuel de prise en main de votre système
+Icon=df-manuel
+Exec=df-manuel
+Terminal=false
+StartupNotify=true
+Categories=Application;Utility;
+X-XFCE-Source=file:///usr/share/applications/df-manuel.desktop

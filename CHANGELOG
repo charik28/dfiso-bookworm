@@ -1,0 +1,80 @@
+Debian Bookworm par debian-facile
+=================================
+
+2023 12 xx : DFiso-12.3
+-----------------------
+* basée sur Debian-12.3
+* correction du bug numlockx
+* correcion de la mise en place des bookmarks
+
+2023 10 21 : DFiso-12.2
+-----------------------
+* basée sur Debian-12.2
+* mise à jour de la documentation intégrée
+* simplification de la configuration Firefox
+* ajout de keepassXC et de l'extension internet associée
+
+2023 07 23 : DFiso-12.1
+-----------------------
+* basée sur Debian-12.1
+* retour à VLC
+* mise à jour du manuel utilisateur
+* suppression de https-everywhere
+* correction du lanceur Calamares
+* suppression des paquets live-*
+* activation des proposed-updates
+* masquage du lanceur MidnightCommander
+* ajout de smart-notifier
+* libreoffice allégé (writer/calc/impress)
+* ajout de drawing pour le dessin simplifié
+* suppression des firmwares inutiles
+* remplacement de xournal par xournalpp (++)
+* ajout d'un sélecteur de clavier en session live
+* retour de Catfish
+
+2023 06 20 : DFiso-12.0-RC3
+---------------------------
+* mise à jour des cahiers du débutant
+* mise à jour du manuel utilisateur DFiso
+* remplacement de VLC par Parole
+* suppression de Catfish
+* nettoyage des paquets Qt*
+* mise à jour des slides Calamares
+
+2023 06 13 : DFiso-12.0-RC2
+---------------------------
+* basée sur Debian-12 stable
+* mise à jour de la conf lightdm
+* mise à jour de la documentation dédiée
+* ajout de inxi dans les geeks'tools
+* mise à jour de la configuration firefox
+* mise à jour de la configuration thunderbird
+* test et activation de gdebi-fixdesk
+* suppression des entrées de menu inutiles
+* ajout des lanceurs dans le panel xfce :
+  Thunar, Firefox, Thunderbird, VLC et LibreOffice
+* nettoyage des fonds d'écran : réduction aux fonds Debian et DF'
+
+2023 05 29 : DFiso-12.0-RC1
+---------------------------
+* premiers essais sur Debian-12 :
+  * suppression du handymenu
+  * ajout des outils pour geeks
+
+TODO :
+* tester en live
+* tester installation classique/expert
+* tester installation Calamares
+* choix du thème d'icônes
+* un nouveau fond d'écran DF-Bookworm ?
+
+- test de la conf firefox
+- test de la conf thunderbird
+- changer le theme lightdm bullseye>bookworm
+- mise à jour de la documentation dédiée
+- tester le besoin de gdebi-fixdesk
+- nettoyage des entrées de menu via modif .desktop
+- ajouter les apps dans la barre de tache
+- nettoyage wallpapers
+- nettoyage des appels inutiles du build (packages-lists vs dep)
+- mise à jour des cahiers du débutant

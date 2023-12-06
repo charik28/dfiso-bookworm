@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+# activation des mises à jour automatiques https://wiki.debian.org/UnattendedUpgrades
+echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
+dpkg-reconfigure -f noninteractive unattended-upgrades
+
+# Mise à jour complètes (par défaut n'appliquait pas à updates)
+p="/etc/apt/apt.conf.d/50unattended-upgrades"
+sed -i 's|^//\(      "origin=Debian,codename=${distro_codename}-updates";\)|  \1|' "$p"
+
+# attendre 3 minutes pour vérifier et appliquer les mises à jour
+for p in "/etc/systemd/system/apt-daily.timer.d" "/etc/systemd/system/apt-daily-upgrade.timer.d"
+do
+    mkdir "$p"
+    echo "[Timer]\nOnBootSec=3min" > "$p/override.conf"
+done

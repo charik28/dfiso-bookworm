@@ -1,0 +1,8 @@
+#!/bin/bash
+
+apt autoremove --purge -y live-boot live-tools live-config live-config-systemd calamares-settings-debian calamares
+
+echo "GRUB_DISABLE_OS_PROBER=\"false\"" >> /etc/default/grub
+update-grub
+
+exit 0

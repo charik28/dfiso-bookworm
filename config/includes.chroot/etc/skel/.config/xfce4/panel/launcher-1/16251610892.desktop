@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=Tutoriels vidéos
+Comment=Chaîne peertube Debian-Facile
+Icon=/usr/share/pixmaps/dfiso-peertube.png
+URL=https://video.tedomum.net/accounts/debian.facile/video-channels

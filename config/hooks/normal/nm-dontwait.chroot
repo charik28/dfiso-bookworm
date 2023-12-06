@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+
+# ne pas attendre le réseau
+systemctl disable 'NetworkManager-wait-online.service'

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Les cahiers du débutant
+Comment=Manuel simplifié pour bien commencer sur Debian
+Icon=lcdd
+Exec=lcdd
+Terminal=false
+StartupNotify=true
+Categories=Application;Utility;
+X-XFCE-Source=file:///usr/share/applications/lcdd.desktop

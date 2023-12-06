@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Space-notify
+Comment=Vérifie et signale l'espace disque disponible
+Exec=/usr/share/dfiso/space-notify.sh
+Path=/usr/share/dfiso
+Terminal=false
+StartupNotify=false

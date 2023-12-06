@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=Wiki Debian-Facile
+Comment=Accédez à la documenttion en ligne Debian-Facile
+Icon=/usr/share/pixmaps/dfiso-debianfacile.png
+URL=https://debian-facile.org/wiki

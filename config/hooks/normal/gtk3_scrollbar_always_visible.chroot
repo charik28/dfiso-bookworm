@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+
+# Toujours afficher la barre de défilement sous gtk3
+echo 'export GTK_OVERLAY_SCROLLING=0' >> /etc/environment

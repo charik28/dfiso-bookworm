@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+# nettoyage des firmwares inutiles
+if [ "$(dpkg --print-architecture)" = "amd64" ]; then
+    apt-get -y remove --purge firmware-nvidia-tesla-gsp firmware-qcom-soc firmware-samsung firmware-ti-connectivity raspi-firmware
+else
+    apt-get -y remove --purge firmware-qcom-soc firmware-samsung firmware-ti-connectivity raspi-firmware
+fi

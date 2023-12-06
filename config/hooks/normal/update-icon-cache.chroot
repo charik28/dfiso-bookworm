@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+# mise à jour des fichiers cache des thèmes d'icônes
+gtk-update-icon-cache /usr/share/icons/Adwaita/
+gtk-update-icon-cache /usr/share/icons/gnome/
+gtk-update-icon-cache /usr/share/icons/gnome-brave/
+gtk-update-icon-cache /usr/share/icons/HighContrast/
+gtk-update-icon-cache /usr/share/icons/Numix/
+gtk-update-icon-cache /usr/share/icons/Numix-Circle/
+gtk-update-icon-cache /usr/share/icons/Numix-Circle-Light/
+gtk-update-icon-cache /usr/share/icons/Numix-Light/
+gtk-update-icon-cache /usr/share/icons/Tango/

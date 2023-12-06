@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=Forum Debian-Facile
+Comment=Accédez au forum de discussion Debian-Facile
+Icon=/usr/share/pixmaps/dfiso-forumfacile.png
+URL=https://debian-facile.org/forum.php
