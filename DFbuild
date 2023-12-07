@@ -1,6 +1,6 @@
 #!/bin/bash
 # Debian-Facile live-build script
-# https://debian-facile.org/git/ProjetsDF/dfiso-bookworm/
+# https://salsa.debian.org/debian-facile-team/projetsdf/dfiso-bookworm
 
 # set working directory ------------------------------------------------
 DFDIR="$(realpath "$(dirname "$0")")"

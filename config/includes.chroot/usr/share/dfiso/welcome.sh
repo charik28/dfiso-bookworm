@@ -23,7 +23,7 @@ Votre nouveau système est une Debian agrémentée de quelques outils facilitant
 N'hésitez pas à visiter <a href=\"https://debian-facile.org/projets:iso-debian-facile\">la page du projet</a> et à vous inscrire <a href=\"https://debian-facile.org/forum.php\">sur le forum Debian-Facile</a>
 afin de nous faire part de vos retours et suggestions.
 
-Si vous désirez modifier ce système pour vos besoins personnels ou associatifs, les <a href=\"https://http.debian-facile.org/git/ProjetsDF/dfiso-bookworm\">sources</a> sont libres <a href=\"https://www.gnu.org/licenses/quick-guide-gplv3.fr.html\">-GPLv3-</a> ☺.
+Si vous désirez modifier ce système pour vos besoins personnels ou associatifs, les <a href=\"https://salsa.debian.org/debian-facile-team/projetsdf/dfiso-bookworm\">sources</a> sont libres <a href=\"https://www.gnu.org/licenses/quick-guide-gplv3.fr.html\">-GPLv3-</a> ☺.
 
 "
 }&
