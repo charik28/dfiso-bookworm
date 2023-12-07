@@ -6,7 +6,8 @@ Pour contribuer et participer aux discussions, rendez-vous [sur le forum](https:
 
 Pour discuter en direct, debian-facile a ouvert un salon IRC #df-iso sur le serveur OFTC ([version en ligne](https://webchat.oftc.net/?channels=df-iso))
 
-## Liens lié au projet
+## Liens DFiso : téléchargements, documentation et tutoriels
+
 * les images ISO : https://debian-facile.org/dflinux/isos/ & https://arpinux.org/dfiso/
 * la documentation à jour : https://debian-facile.org/projets:iso-debian-facile
 * le tutoriel vidéo d'installation Calamares : https://video.tedomum.net/w/i8iWo6DzeEndXVN9P7DmmK & https://arpinux.org/df-mini-tutos/DFiso-Bookworm-installation-calamares.mp4
@@ -16,6 +17,7 @@ Pour discuter en direct, debian-facile a ouvert un salon IRC #df-iso sur le serv
 * l'annonce mastodon : https://framapiaf.org/@df/110763891658769893
 
 ## Construction de l'ISO à partir des sources
+
 ```
 sudo apt install git live-build apt-cacher-ng
 git clone https://salsa.debian.org/debian-facile-team/projetsdf/dfiso-bookworm.git
