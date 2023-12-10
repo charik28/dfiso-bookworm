@@ -1,8 +1,15 @@
 Debian Bookworm par debian-facile
 =================================
 
+2023 12 xx : DFiso-12.4
+-----------------------
+* basée sur Debian-12.4
+*...
+
 2023 12 16 : DFiso-12.3
 -----------------------
+--Version non publiée--
+
 * basée sur Debian-12.3
 * correction du bug numlockx
 * correcion de la mise en place des bookmarks
