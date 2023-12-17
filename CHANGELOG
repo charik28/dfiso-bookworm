@@ -1,10 +1,11 @@
 Debian Bookworm par debian-facile
 =================================
 
-2023 12 17 : DFiso-12.4
------------------------
+2023 12 17 : DFiso-12.4.1
+-------------------------
 * basée sur Debian-12.4
 * mise à jour du manuel utilisateur
+* correction du script de bienvenue
 
 2023 12 16 : DFiso-12.3
 -----------------------
