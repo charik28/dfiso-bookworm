@@ -53,7 +53,7 @@ fi
 # en session live
 if [ $(df '/' --output=source | tail -n1) == 'overlay' ]; then
     # faire confiance au lanceur Calamares sur le bureau
-    f='/home/humain/Bureau/install-debian.desktop' ; gio set -t string $f metadata::xfce-exe-checksum "$(sha256sum $f | awk '{print $1}')"
+    gio set -t string '/home/humain/Bureau/install-debian.desktop' metadata::xfce-exe-checksum "$(sha256sum /usr/share/applications/install-debian.desktop | awk '{print $1}')"
 fi
 
 # suppression du lanceur de l'écran d'accueil
