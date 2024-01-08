@@ -45,7 +45,7 @@ gnome-mahjongg
 
 #system
 vrms synaptic gdebi gnome-system-tools dkms
-gnome-disk-utility gdisk dosfstools ntfs-3g
+gparted gnome-disk-utility gdisk dosfstools ntfs-3g
 mtools e2fsprogs unattended-upgrades smart-notifier
 
 #flatpak
@@ -75,3 +75,6 @@ ttf-mscorefonts-installer ttf-xfree86-nonfree unrar
 #geek-apps
 whois nmap nethogs ncdu iotop mc haveged dnsutils
 pciutils usbutils neofetch inxi lshw kbd
+
+#live-installer
+calamares-settings-debian
