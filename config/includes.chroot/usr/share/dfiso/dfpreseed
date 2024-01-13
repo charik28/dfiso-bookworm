@@ -1,8 +1,10 @@
 #!/bin/bash
 
+# suppression des paquets live*
 apt autoremove --purge -y live-boot live-tools live-config live-config-systemd calamares-settings-debian calamares
 
-echo "GRUB_DISABLE_OS_PROBER=\"false\"" >> /etc/default/grub
+# décommenter pour activer os-prober
+sed -i '/OS_PROBER/s/^#//g' /etc/default/grub
 update-grub
 
 exit 0
