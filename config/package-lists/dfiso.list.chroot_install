@@ -57,7 +57,7 @@ dvd+rw-tools xdotool eject deja-dup blueman hardinfo
 
 #misc
 gvfs-fuse gvfs-backends x11-utils x11-apps
-numlockx laptop-detect ntp qt5-style-plugins
+numlockx laptop-detect ntp qt5-style-plugins console-data
 
 #theme
 gnome-brave-icon-theme arc-theme numix-gtk-theme
