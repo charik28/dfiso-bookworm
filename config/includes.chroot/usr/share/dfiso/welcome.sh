@@ -19,6 +19,7 @@ Votre nouveau système est une Debian agrémentée de quelques outils facilitant
 À votre disposition pour vous aider dans votre découverte :
  · <b><a href=\"file:///usr/share/dfiso/debian-facile-manuel-utilisateur.pdf\">le manuel de l'utilisateur</a></b> : un manuel d'utilisation pour une prise en main immédiate de votre système,
  · <b><a href=\"file:///usr/share/lcdd/les_cahiers_du_debutant.pdf\">les cahiers du débutant</a></b> : un manuel complet adapté aux nouveaux venus dans l'univers Debian GNU/Linux,
+ · <b>le Dfiso-Theme</b> : un changeur de thème rapide pour configurer facilement votre environnement. <b>DFiso-Theme</b> est disponible depuis votre menu d'applications.
 
 N'hésitez pas à visiter <a href=\"https://debian-facile.org/projets:iso-debian-facile\">la page du projet</a> et à vous inscrire <a href=\"https://debian-facile.org/forum.php\">sur le forum Debian-Facile</a>
 afin de nous faire part de vos retours et suggestions.
@@ -60,6 +61,3 @@ fi
 if [ -e /home/$USER/.config/autostart/welcome.desktop ]; then
     rm /home/$USER/.config/autostart/welcome.desktop
 fi
-
-
-

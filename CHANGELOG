@@ -6,7 +6,7 @@ Debian Bookworm par debian-facile
 * basée sur Debian-12.5
 * correction du bug des paquets ajoutés puis supprimés avec debian-installer
 * ajout de console-data pour avoir un clavier fr en tty
-* ...
+* ajout du changeur de theme rapide DFiso-Theme
 
 2024 01 09 : DFiso-12.4.2
 -------------------------
