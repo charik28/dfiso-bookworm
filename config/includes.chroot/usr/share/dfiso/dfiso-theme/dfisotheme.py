@@ -5,8 +5,6 @@
 # sources : HandyTheme par @prx https://framagit.org/handylinux/debdev/-/blob/master/handylinuxlook/handylinuxlook-1.1/HandyTheme/handytheme.py
 # mise à jour python3 par @Elzen https://debian-facile.org/viewtopic.php?id=34488
 
-# TODO : ajouter la configuration de la taille de xfce4-panel via xfconf-query
-
 import os, gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk as gtk
@@ -14,41 +12,47 @@ import subprocess as sub
 
 class Theme:
 
-  def __init__(self,font="",xfceTheme="",xfwmTheme="",cursorName="",cursorSize=""):
-    self.xfceFont = font
+  def __init__(self,font="",titlefont="",MonospaceFont="",xfceTheme="",xfwmTheme="",cursorName="",cursorSize="",deskiconSize=""):
     self.xfwmFont = font
+    self.xfceFont = titlefont
+    self.MonospaceFont = MonospaceFont
     self.xfceTheme = xfceTheme
     self.xfwmTheme = xfwmTheme
     self.cursorName = cursorName
     self.cursorSize = cursorSize
+    self.deskiconSize = deskiconSize
 
   def apply(self,widget):
-    os.system('xfconf-query -s "' + self.xfceFont + '" -c xfwm4 -p /general/title_font')
     os.system('xfconf-query -s "' + self.xfwmFont + '" -c xsettings -p /Gtk/FontName')
+    os.system('xfconf-query -s "' + self.xfceFont + '" -c xfwm4 -p /general/title_font')
+    os.system('xfconf-query -s "' + self.MonospaceFont + '" -c xsettings -p /Gtk/MonospaceFontName')
     os.system('xfconf-query -s "' + self.xfceTheme + '" -c xsettings -p /Net/ThemeName')
     os.system('xfconf-query -s "' + self.xfwmTheme + '" -c xfwm4 -p /general/theme')
     os.system('xfconf-query -s "' + self.cursorName + '" -c xsettings -p /Gtk/CursorThemeName')
     os.system('xfconf-query -s "' + self.cursorSize + '" -c xsettings -p /Gtk/CursorThemeSize')
+    os.system('xfconf-query -s "' + self.deskiconSize + '" -c xfce4-desktop -p /desktop-icons/icon-size')
 
   def getCurrent(self):
-    self.xfceFont = sub.check_output(['xfconf-query','-c','xfwm4','-p','/general/title_font']).rstrip(b'\n').decode()
     self.xfwmFont = sub.check_output(['xfconf-query','-c','xsettings','-p','/Gtk/FontName']).rstrip(b'\n').decode()
+    self.xfceFont = sub.check_output(['xfconf-query','-c','xfwm4','-p','/general/title_font']).rstrip(b'\n').decode()
+    self.MonospaceFont = sub.check_output(['xfconf-query','-c','xsettings','-p','/Gtk/MonospaceFontName']).rstrip(b'\n').decode()
     self.xfceTheme = sub.check_output(['xfconf-query','-c','xsettings','-p','/Net/ThemeName']).rstrip(b'\n').decode()
     self.xfwmTheme = sub.check_output(['xfconf-query','-c','xfwm4','-p','/general/theme']).rstrip(b'\n').decode()
     self.cursorName = sub.check_output(['xfconf-query','-c','xsettings','-p','/Gtk/CursorThemeName']).rstrip(b'\n').decode()
     self.cursorSize = sub.check_output(['xfconf-query','-c','xsettings','-p','/Gtk/CursorThemeSize']).rstrip(b'\n').decode()
+    self.cursorSize = sub.check_output(['xfconf-query','-c','xfce4-desktop','-p','/desktop-icons/icon-size']).rstrip(b'\n').decode()
 
 class Main:
   def Quitter(self, widget):
     gtk.main_quit()
 
   def __init__(self):
-    smallLightTheme = Theme("DejaVu Sans Condensed 10", "Arc", "Arc", "Adwaita", "22")
-    normalLightTheme = Theme("DejaVu Sans Condensed 12", "Arc", "Arc", "Adwaita", "22")
-    largeLightTheme = Theme("DejaVu Sans Bold 18", "Adwaita", "Default-hdpi", "Adwaita", "48")
-    smallDarkTheme = Theme("DejaVu Sans Condensed 10", "Arc-Dark", "Arc-Dark", "DMZ-White", "22")
-    normalDarkTheme = Theme("DejaVu Sans Condensed 12", "Arc-Dark", "Arc-Dark", "DMZ-White", "22")
-    largeDarkTheme = Theme("DejaVu Sans Bold 18", "Adwaita-dark", "Default-hdpi", "DMZ-White", "48")
+    smallLightTheme = Theme("DejaVu Sans Condensed 10", "DejaVu Sans Bold 10", "Monospace 10", "Arc", "Arc", "Adwaita", "22", "42")
+    normalLightTheme = Theme("DejaVu Sans Condensed 11", "DejaVu Sans Bold 12", "Monospace 11", "Arc", "Arc", "Adwaita", "22", "48")
+    largeLightTheme = Theme("DejaVu Sans Bold 18", "DejaVu Sans Bold 18", "Monospace 14", "Numix", "Default-hdpi", "Adwaita", "48", "56")
+    smallDarkTheme = Theme("DejaVu Sans Condensed 10", "DejaVu Sans Bold 10", "Monospace 10", "Arc-Dark", "Arc-Dark", "DMZ-White", "22", "42")
+    normalDarkTheme = Theme("DejaVu Sans Condensed 11", "DejaVu Sans Bold 12", "Monospace 11", "Arc-Dark", "Arc-Dark", "DMZ-White", "22", "48")
+    largeDarkTheme = Theme("DejaVu Sans Bold 18", "DejaVu Sans Bold 18", "Monospace 14", "Arc-Dark", "Default-hdpi", "DMZ-White", "48", "56")
 
     currentTheme = Theme()
     currentTheme.getCurrent()
