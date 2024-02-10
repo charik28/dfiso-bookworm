@@ -1,8 +1,0 @@
-#!/bin/bash
-# simple script to launch dfisotheme
-
-cd /usr/share/dfiso/dfiso-theme/
-
-./dfisotheme.py &
-
-exit 0
