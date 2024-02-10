@@ -61,7 +61,7 @@ numlockx laptop-detect ntp qt5-style-plugins console-data
 
 #theme
 gnome-brave-icon-theme arc-theme numix-gtk-theme
-numix-icon-theme numix-icon-theme-circle
+numix-icon-theme numix-icon-theme-circle dmz-cursor-theme
 
 #contrib
 libdvd-pkg
