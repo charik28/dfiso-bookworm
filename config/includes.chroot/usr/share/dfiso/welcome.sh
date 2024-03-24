@@ -1,6 +1,14 @@
 #!/bin/bash
 ###########
 
+# suppression du lanceur de l'écran d'accueil
+if [ -e /home/$USER/.config/autostart/welcome.desktop ]; then
+	rm /home/$USER/.config/autostart/welcome.desktop
+else
+	echo "ERREUR : ce script est s'executer qu'une seule seule fois ! $(date)"
+	exit 1
+fi
+
 #############
 ###Interactif
 #############
@@ -33,6 +41,12 @@ Si vous désirez modifier ce système pour vos besoins personnels ou associatifs
 #################
 ###Non-interactif
 #################
+# en session live
+if [ $(df '/' --output=source | tail -n1) == 'overlay' ]; then
+    # faire confiance au lanceur Calamares sur le bureau
+    gio set -t string '/home/humain/Bureau/install-debian.desktop' metadata::xfce-exe-checksum "$(sha256sum /usr/share/applications/install-debian.desktop | awk '{print $1}')"
+fi
+
 # mise en place des bookmarks
 mkdir -p "$HOME/.config/gtk-3.0/"
 echo "file://$HOME/Documents
@@ -50,15 +64,4 @@ if [ -f "$f" ]; then
     sed -ri "s|^(irc_nick2 = ).*|\1${me}_|" "$f"
     sed -ri "s|^(irc_nick3 = ).*|\1${me}__|" "$f"
     sed -ri "s|^(irc_user_name = ).*|\1${me}|" "$f"
-fi
-
-# en session live
-if [ $(df '/' --output=source | tail -n1) == 'overlay' ]; then
-    # faire confiance au lanceur Calamares sur le bureau
-    gio set -t string '/home/humain/Bureau/install-debian.desktop' metadata::xfce-exe-checksum "$(sha256sum /usr/share/applications/install-debian.desktop | awk '{print $1}')"
-fi
-
-# suppression du lanceur de l'écran d'accueil
-if [ -e /home/$USER/.config/autostart/welcome.desktop ]; then
-    rm /home/$USER/.config/autostart/welcome.desktop
 fi
