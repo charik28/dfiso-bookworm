@@ -20,7 +20,7 @@ thunar-archive-plugin tumbler-plugins-extra
 hexchat firefox-esr firefox-esr-l10n-fr
 webext-ublock-origin-firefox webext-keepassxc-browser
 thunderbird thunderbird-l10n-fr
-transmission-gtk network-manager-gnome
+transmission-gtk network-manager-gnome network-manager-openvpn-gnome
 curl wpasupplicant
 
 #office
