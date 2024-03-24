@@ -7,4 +7,4 @@ set -e
 curl 'https://www.fdn.fr/ca-vpn-public-fdn.crt' -so '/usr/share/dfiso/ca-vpn-public-fdn.crt'
 
 #Hook utilisateur pour le préconfigurer
-echo 'nmcli connection add "connection.uuid" "8e134e8b-2c57-4e84-b084-1abe6419da03" "con-name" "FDN publique" "type" "vpn" "vpn-type" "openvpn" "autoconnect" "false" "vpn.data" "ca = /usr/share/dfiso/ca-vpn-public-fdn.crt, connection-type = password, password-flags = 1, remote = open.fdn.fr, username = Edward" "vpn.secrets" "password=Snowden"' | tee -a "/usr/share/dfiso/welcome.sh"
+echo 'nmcli connection add "connection.uuid" "8e134e8b-2c57-4e84-b084-1abe6419da03" "con-name" "FDN publique" "type" "vpn" "vpn-type" "openvpn" "autoconnect" "false" "vpn.data" "ca = /usr/share/dfiso/ca-vpn-public-fdn.crt, connection-type = password, remote = open.fdn.fr, username = Edward" "vpn.secrets" "password=Snowden"' | tee -a "/usr/share/dfiso/welcome.sh"
