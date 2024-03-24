@@ -1,6 +1,12 @@
 Debian Bookworm par debian-facile
 =================================
 
+2024 04 07 : DFiso-12.6
+-----------------------
+* basée sur Debian-12.6
+* ajout de la configuration VPN utilisant le VPN publique de la FDN https://vpn-public.fdn.fr/
+* mise à jour de la documentation
+
 2024 01 11 : DFiso-12.5
 -----------------------
 * basée sur Debian-12.5
