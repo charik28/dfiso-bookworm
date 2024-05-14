@@ -265,3 +265,7 @@ user_pref("widget.gtk.overlay-scrollbars.enabled", false);
 //disposition customisé de l'ui
 user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"nav-bar\":[\"back-button\",\"forward-button\",\"stop-reload-button\",\"urlbar-container\",\"save-to-pocket-button\",\"privatebrowsing-button\",\"downloads-button\",\"fxa-toolbar-menu-button\",\"ublock0_raymondhill_net-browser-action\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\"],\"PersonalToolbar\":[\"personal-bookmarks\"]},\"seen\":[\"developer-button\",\"ublock0_raymondhill_net-browser-action\"],\"dirtyAreaCache\":[\"nav-bar\",\"toolbar-menubar\",\"TabsToolbar\",\"PersonalToolbar\"],\"currentVersion\":17,\"newElementCount\":3}");
 user_pref("browser.bookmarks.addedImportButton", true);
+//DNS sécurisé non cloudflare via FDN : https://www.fdn.fr/actions/dns/
+user_pref("network.trr.custom_uri", "https://ns0.fdn.fr/dns-query");
+user_pref("network.trr.mode", 2);
+user_pref("network.trr.uri", "https://ns0.fdn.fr/dns-query");
