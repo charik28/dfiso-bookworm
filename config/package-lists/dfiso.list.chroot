@@ -10,7 +10,7 @@ lightdm lightdm-gtk-greeter-settings mugshot
 
 #desktop & xfce4-apps
 xfce4 xfce4-terminal xfce4-notifyd xfce4-settings
-xfce4-taskmanager file-roller xfburn xfce4-goodies
+xfce4-taskmanager engrampa xfburn xfce4-goodies
 xfce4-power-manager tlp
 
 #filer xtra
