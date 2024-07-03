@@ -1,12 +1,13 @@
 Debian Bookworm par debian-facile
 =================================
 
-2024 06 30 : DFiso-12.6
+2024 07 03 : DFiso-12.6
 -----------------------
 * basée sur Debian-12.6
 * ajout de la configuration VPN utilisant le VPN publique de la FDN https://vpn-public.fdn.fr/
 * remplacement de Xarchiver par Engrampa
 * mise à jour de la documentation
+* correction de l'installation forcée de GRUB sur /dev/sda
 
 2024 01 11 : DFiso-12.5
 -----------------------
