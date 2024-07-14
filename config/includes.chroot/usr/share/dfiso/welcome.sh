@@ -56,6 +56,9 @@ file://$HOME/T%C3%A9l%C3%A9chargements
 file://$HOME/Vid%C3%A9os
 " > "$HOME/.config/gtk-3.0/bookmarks"
 
+#gnome-software : faire passer debian devant flatpack par défaut https://debian-facile.org/viewtopic.php?pid=416618#p416618
+gsettings set org.gnome.software packaging-format-preference "['deb']"
+
 # nom de l'utilisateur dans hexchat
 f="$HOME/.config/hexchat/hexchat.conf"
 if [ -f "$f" ]; then
