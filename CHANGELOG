@@ -1,6 +1,12 @@
 Debian Bookworm par debian-facile
 =================================
 
+2024 xx xx : Dfiso-12.7
+-----------------------
+* basée sur Debain-12.7
+* priorité donnée aux paquets debian (.deb) sur les flatpacks dans "Logiciels"
+* ...
+
 2024 07 03 : DFiso-12.6
 -----------------------
 * basée sur Debian-12.6
