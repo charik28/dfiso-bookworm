@@ -5,6 +5,7 @@ Debian Bookworm par debian-facile
 -----------------------
 * basée sur Debain-12.7
 * priorité donnée aux paquets debian (.deb) sur les flatpacks dans "Logiciels"
+* passage du md5sum au sha256sum pour la vérification de l'ISO - merci @wardidi
 * ...
 
 2024 07 03 : DFiso-12.6

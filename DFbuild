@@ -6,7 +6,7 @@
 DFDIR="$(realpath "$(dirname "$0")")"
 cd ${DFDIR}
 # cfg ------------------------------------------------------------------
-VERSION="12.6"
+VERSION="12.7"
 LOG="dfiso.log"
 if [ `whoami` != root ]; then
     echo "erreur : lancer DFbuild en tant qu'administrateur"
@@ -87,7 +87,7 @@ if test -f live-image-${ARCH}.hybrid.iso; then
     mv live-image-${ARCH}.hybrid.iso ${ISODIR}/${NAME}.iso
     mv chroot.packages.install ${ISODIR}/${NAME}.pkgs
     mv dfiso.log ${ISODIR}/${NAME}.log
-    cd ${ISODIR} && md5sum ${NAME}.iso > ${NAME}.md5
+    cd ${ISODIR} && sha256sum ${NAME}.iso > ${NAME}.sha256
     cd ${DFDIR}
     ## permissions
     chown -R ${SUDO_USER}:${SUDO_USER} ${ISODIR}
