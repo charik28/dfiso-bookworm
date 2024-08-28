@@ -1,7 +1,7 @@
 Debian Bookworm par debian-facile
 =================================
 
-2024 01 09 : Dfiso-12.7
+2024 09 01 : Dfiso-12.7
 -----------------------
 * basée sur Debain-12.7
 * priorité donnée aux paquets debian (.deb) sur les flatpacks dans "Logiciels"
