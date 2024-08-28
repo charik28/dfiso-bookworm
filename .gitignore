@@ -15,7 +15,7 @@
 /config/build
 /config/common
 /config/source
-/config/packages/lescahiersdudebutant*
+/config/packages/debian-beginners-handbook*
 /config/hooks/normal/10*
 /config/hooks/normal/50*
 /config/hooks/normal/80*

@@ -26,7 +26,7 @@ Votre nouveau système est une Debian agrémentée de quelques outils facilitant
 
 À votre disposition pour vous aider dans votre découverte :
  · <b><a href=\"file:///usr/share/dfiso/debian-facile-manuel-utilisateur.pdf\">le manuel de l'utilisateur</a></b> : un manuel d'utilisation pour une prise en main immédiate de votre système,
- · <b><a href=\"file:///usr/share/lcdd/les_cahiers_du_debutant.pdf\">les cahiers du débutant</a></b> : un manuel complet adapté aux nouveaux venus dans l'univers Debian GNU/Linux,
+ · <b><a href=\"file:///usr/share/debian-beginners-handbook-fr/les_cahiers_du_debutant.pdf\">les cahiers du débutant</a></b> : un manuel complet adapté aux nouveaux venus dans l'univers Debian GNU/Linux,
  · <b>le Dfiso-Theme</b> : un changeur de thème rapide pour configurer facilement votre environnement.
    <b>DFiso-Theme</b> est disponible depuis votre menu d'applications, catégorie "Accessoires".
 

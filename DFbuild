@@ -66,7 +66,7 @@ esac
 CONFIG+=("--iso-application" "DFiso_$VERSION" "--iso-volume" "DFiso_$VERSION")
 
 # téléchargement des cahiers du débutant si nécessaire (vérifier la version)
-LESCAHIERS="lescahiersdudebutant_12.0.1_all.deb"
+LESCAHIERS="debian-beginners-handbook-fr_12.7_all.deb"
 
 if [ ! -f "${DFDIR}/config/packages/${LESCAHIERS}" ]; then
     cd ${DFDIR}/config/packages/
