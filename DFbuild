@@ -70,7 +70,7 @@ LESCAHIERS="debian-beginners-handbook-fr_12.7_all.deb"
 
 if [ ! -f "${DFDIR}/config/packages/${LESCAHIERS}" ]; then
     cd ${DFDIR}/config/packages/
-    wget -c https://debian-facile.org/projets/lescahiersdudebutant/download/${LESCAHIERS}
+    wget -c https://download.tuxfamily.org/debianbegin/${LESCAHIERS}
     cd ${DFDIR}
 fi
 
