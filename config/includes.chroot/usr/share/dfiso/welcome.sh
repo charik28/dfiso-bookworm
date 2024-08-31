@@ -41,6 +41,9 @@ Si vous désirez modifier ce système pour vos besoins personnels ou associatifs
 #################
 ###Non-interactif
 #################
+# Workaround for Calamares setup https://github.com/calamares/calamares/issues/2362
+chmod 700 $HOME
+
 # en session live
 if [ $(df '/' --output=source | tail -n1) == 'overlay' ]; then
     # faire confiance au lanceur Calamares sur le bureau
