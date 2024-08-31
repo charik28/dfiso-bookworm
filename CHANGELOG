@@ -8,6 +8,7 @@ Debian Bookworm par debian-facile
 * passage du md5sum au sha256sum pour la vérification de l'ISO - merci @wardidi
 * mise à jour du manuel utilisateur et des cahiers du débutant
 * passage à transmission pour la création des torrents
+* correction des permissions utilisateur lors d'une installation via Calamares
 
 2024 07 03 : DFiso-12.6
 -----------------------

@@ -5,7 +5,7 @@
 if [ -e /home/$USER/.config/autostart/welcome.desktop ]; then
 	rm /home/$USER/.config/autostart/welcome.desktop
 else
-	echo "ERREUR : ce script est s'executer qu'une seule seule fois ! $(date)"
+	echo "ERREUR : ce script est censé ne s'executer qu'une seule seule fois ! $(date)"
 	exit 1
 fi
 
