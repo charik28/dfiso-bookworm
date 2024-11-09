@@ -1,11 +1,13 @@
-<?xml encoding="UTF-8" version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <actions>
 <action>
 	<icon>system-search</icon>
 	<name>Rechercher dans ce dossier</name>
+	<submenu></submenu>
 	<unique-id>1576951940533787-2</unique-id>
 	<command>/usr/bin/catfish --path=%f</command>
 	<description>Effectuer une recherche</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 	<audio-files/>
@@ -16,12 +18,60 @@
 </action>
 <action>
 	<icon>utilities-terminal</icon>
-	<name>Ouvrir un terminal ici</name>
+	<name>Ouvrir un terminal</name>
+	<submenu></submenu>
 	<unique-id>1576951826847254-1</unique-id>
 	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
-	<description>Exemple d’une action personnalisée</description>
+	<description>Dans le dossier courant</description>
+	<range></range>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<directories/>
+</action>
+<action>
+	<icon>object-rotate-right</icon>
+	<name>Rotation 90° horaire</name>
+	<submenu></submenu>
+	<unique-id>1731158878453726-1</unique-id>
+	<command>find %F -type f -exec convert -rotate 90 &quot;{}&quot; &quot;{}&quot; \;</command>
+	<description>Rotation d&apos;image</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>gtk-convert</icon>
+	<name>Extraire l&apos;audio</name>
+	<submenu></submenu>
+	<unique-id>1731159057592961-2</unique-id>
+	<command>find %F -type f -exec ffmpeg -i &quot;{}&quot; &quot;{}.mp3&quot; \;</command>
+	<description>Conversion en MP3</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>mail-attachment</icon>
+	<name>Réduir un PDF</name>
+	<submenu></submenu>
+	<unique-id>1731159252506135-3</unique-id>
+	<command>find %F -type f -exec ps2pdf -dPDFSETTINGS=/ebook &quot;{}&quot; &quot;lighter-{}&quot; \;</command>
+	<description>En qualité ebook (72p)</description>
+	<range>*</range>
+	<patterns>*.pdf</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>libreoffice-extension</icon>
+	<name>Convertir en pdf</name>
+	<submenu></submenu>
+	<unique-id>1731159485306202-4</unique-id>
+	<command>libreoffice --invisible --convert-to pdf %F</command>
+	<description>avec libreoffice</description>
+	<range>*</range>
+	<patterns>*.doc;*.docx;*.odt;*.odp;*.pps;*.ppt;*.xls;*.xlsx;*.ods;*.pptx</patterns>
+	<other-files/>
+	<text-files/>
 </action>
 </actions>
