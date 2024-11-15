@@ -19,7 +19,19 @@ Pour discuter en direct, debian-facile a ouvert un salon IRC #df-iso sur le serv
 ## Construction de l'ISO à partir des sources
 
 ```
-sudo apt install git live-build apt-cacher-ng
+sudo apt install git live-build
+sudo apt install live-build
+apt install live-build
 git clone https://salsa.debian.org/debian-facile-team/projetsdf/dfiso-bookworm.git
-sudo ./dfiso-bookworm/DFbuild 64
+chmod +x ./DFbuild
+./DFbuild 64
 ```
+### error : debootstrap command not found
+root@debian:/home/charik# debootstrap stable /stable-chroot
+bash: debootstrap : commande introuvable
+### fix
+dpkg -L debootstrap | grep bin
+
+export PATH=$PATH:/usr/sbin
+
+

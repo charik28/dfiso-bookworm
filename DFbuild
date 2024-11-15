@@ -48,13 +48,13 @@ echo -e "----\n" >> ${LOG}
 
 CONFIG=()
 # utiliser apt-cacher s'il est installé
-if dpkg-query -W apt-cacher-ng &>"/dev/null"
-then
-    export http_proxy="http://127.0.0.1:3142/"
+#if dpkg-query -W apt-cacher-ng &>"/dev/null"
+#then
+    export http_proxy="http://192.168.219.150:3142/"
     CONFIG+=("--apt-http-proxy" "$http_proxy")
-else
-    echo "AVERTISSEMENT: apt-cacher-ng n'est pas installé"
-fi
+#else
+#    echo "AVERTISSEMENT: apt-cacher-ng n'est pas installé"
+#fi
 
 # architecture handling
 CONFIG+=("-a" "${ARCH}")
@@ -70,7 +70,7 @@ LESCAHIERS="debian-beginners-handbook-fr_12.7.1_all.deb"
 
 if [ ! -f "${DFDIR}/config/packages/${LESCAHIERS}" ]; then
     cd ${DFDIR}/config/packages/
-    wget -c https://download.tuxfamily.org/debianbegin/${LESCAHIERS}
+    wget -c http://192.168.219.150:3142/download.tuxfamily.org/debianbegin/${LESCAHIERS}
     cd ${DFDIR}
 fi
 
